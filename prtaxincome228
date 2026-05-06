@@ -1,0 +1,22 @@
+4003 EPA: Adjust Premium Tax Income Driver calculation to include Written
+description:
+
+As an EPA System Admin, I need to update the Premium Tax Income Driver so it can optionally be based on Earned or Written amounts, allowing FP&A users flexibility while maintaining Earned as the default behavior.
+
+The current process is hardcoded to use Earned only. This PBI will introduce a user-controlled option that defaults to Earned but allows FP&A to switch the driver to Written when required. The change will impact both forms and the calculation logic that consumes the driver. No other driver behavior or downstream logic should change.
+
+accptance criteria
+***See attached email for some background on this request. Reach out to Sherry with requirements questions.Team agreement is reached with FP&A on Earned vs Written driver behavior
+Premium Tax Income Driver defaults to Earned
+FP&A users have the option to select Written instead of Earned
+Selection is available and clearly labeled on the applicable input form(s)
+Driver selection is respected by the calculation logic
+Calculations correctly use Earned or Written based on user selection
+Period (DIM) behavior remains consistent with existing design
+No impact to unrelated drivers or calculations
+TI and rule updates complete successfully with no errors
+Results are validated for both Earned and Written scenarios
+Changes are documented and meet the team’s Definition of Done
+
+
+
