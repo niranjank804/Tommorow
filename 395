@@ -1,0 +1,20 @@
+1796
+EPA: Adjust WorkDay load for International
+As an EPA System Admin, I need the WorkDay load into EPA to dynamically adjust a worker’s Location based on the worker’s Center, so that Centers flagged for alternate Locations load to the correct Location instead of the default.
+
+This enhancement will allow specific Centers (e.g., C090049) instead of loading to the default Location (e.g., L5000) to load to an alternate Location (e.g., L5003) based on a configurable mapping.
+
+The solution must be data-driven (e.g., via a DIM attribute or control structure) so that Centers can be modified to use a different Location so Location assignments can be changed or added without requiring a TI code change.
+
+The logic will be applied during the WorkDay inbound load and will only override the default Location when a valid Center-to-Location mapping exists.
+Acceptance creteria
+Team agreement is reached that Everyone group should have Read access in the new version
+Security behavior for the new version is reviewed and understood
+Reason the Everyone group is not being recognized is identified
+Impacted security logic (including TI, version setup, or DIM security) is identified
+Fix is implemented if a solution is identified
+Fix does not negatively impact existing security behavior
+Users in the Everyone group have Read access as expected after the fix
+Security results are validated against expected behavior
+No unintended changes to unrelated security settings
+Changes are documented and meet the team’s Definition of Ready and Definition of Done
