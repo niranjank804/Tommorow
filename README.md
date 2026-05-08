@@ -1,23 +1,13 @@
-
-
-Subject: PBI 3951796 — WorkDay Load: Adjust Location for International ✅ Completed
-
-Hi Team,
-Happy to share that PBI 3951796 — WorkDay Load: Adjust Location for International has been fully implemented, tested, and validated.
-What was delivered:
-
-Created WFP Override Measures dimension with an Alt Location element
-Built WFP Center Alt Location Override cube with a picklist dropdown (showing plain Location IDs — no alias)
-Updated Workforce Planning Input - Load from Workday TI process to read the override and apply it during the load
-Fixed a pre-existing SUBST bug in the same TI process
-
-Validation:
-Sherry confirmed the Center mappings and all 7 Centers are loading to the correct Locations:
-CentersLocationC090049, C090050, C400403, C601229, C601238L5003 — AustraliaC601186, C601206L5401 — New Zealand
-Status: ✅ PBI 3951796 is complete and ready for closure.
-Thanks to Sherry Pellegrini for the quick validation and feedback throughout.
-Please let me know if you have any questions.
-Thanks & Regards,
-Niranjan
-
-Ready to send! Want me to adjust anything?
+As an EPA System Admin, I need to research with IBM Planning Analytics support the causes of sustained Critical Memory threshold alerts and identify configuration, model, TI, or DIM-level changes that can reduce overall memory consumption so that the system does not repeatedly hit the 475 GB critical threshold and trigger external alert emails.
+The work includes:
+Reviewing current memory usage patterns and alert thresholds.
+Identifying high-memory contributors (cubes, DIM sizes, views, feeders, TI processes, persistent objects).
+Validating IBM-recommended best practices for memory optimization.
+Proposing actionable remediation options (configuration changes, cleanup activities, redesign recommendations).
+Documenting findings and recommendations for implementation planning.
+Acceptance criteria:
+Top contributors to critical memory usage are identified (e.g., specific cubes, DIM growth, TI behavior, or configuration settings).
+At least one viable option to reduce or stabilize memory usage is documented (no implementation required).
+Any recommended changes clearly state expected impact on memory and potential risks.
+Results are documented in a format consumable by the EPA admin team for follow‑up PBIs or implementation work.
+No production changes are made as part of this PBI.
