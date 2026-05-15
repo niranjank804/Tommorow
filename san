@@ -1,0 +1,12 @@
+PBI-4003228 — Premium Tax Income Driver
+Hi Sherry,
+Hope you're doing well. I've completed the implementation of PBI-4003228 — Premium Tax Income Driver in Assurant GFS Dev. FP&A can now select Written or Earned Premium as the tax base for State Premium Tax (A740100-00) via the Income Assumptions cube.
+One item needs your attention before we can move to UAT.
+Background
+The driver selection (Written / Earned) is stored as a string element in Income Assumptions at the annual period level. Income Rule 5200 reads this driver to determine the premium base for A740100-00. However, TM1 strings cannot natively feed across annual-to-monthly period boundaries, so changing the driver string alone does not auto-trigger a recalculation of the monthly A740100-00 values.
+What's Needed
+Could you please build a TI Refresh Process that forces recalculation of A740100-00 in the Income cube after the Premium Tax Income Driver is changed? This will ensure FP&A sees the correct results immediately after switching between Written and Earned without having to manually re-enter the Premium Tax Rate.
+In the meantime, FP&A can work around this by re-entering the Premium Tax Rate after changing the driver, which triggers the recalc correctly.
+Please let me know if you need the rule details or have any questions — happy to walk you through the setup.
+Thanks,
+Niranjan
